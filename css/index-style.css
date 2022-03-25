@@ -19,6 +19,12 @@ body {
   margin-bottom: 50px;
 }
 
+@media only screen and (max-width: 400px) {
+  #whole-wrap header {
+    margin: 0;
+  }
+}
+
 #whole-wrap header nav {
   border-bottom: 2px solid;
   height: 80px;
@@ -129,6 +135,21 @@ body {
           transform: rotate(15deg);
 }
 
+@media only screen and (max-width: 400px) {
+  #whole-wrap .personal-info .text-area .intro {
+    padding: 10px 20px;
+  }
+  #whole-wrap .personal-info .text-area .intro::after {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #whole-wrap .personal-info .text-area {
+    width: 100%;
+  }
+}
+
 #whole-wrap .personal-info .text-area .contact-info {
   margin: 5px 0;
   display: -webkit-box;
@@ -172,6 +193,18 @@ body {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 400px) {
+  #whole-wrap .personal-info .text-area .contact-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #whole-wrap .personal-info .text-area .contact-info .contact-label {
+    margin-bottom: 10px;
+  }
+}
+
 #whole-wrap .personal-info .photo-area {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -188,5 +221,43 @@ body {
   position: absolute;
   top: -40px;
   left: -220px;
+}
+
+@media only screen and (max-width: 400px) {
+  #whole-wrap .personal-info .photo-area {
+    width: 200px;
+    height: 200px;
+  }
+  #whole-wrap .personal-info .photo-area img {
+    top: -55px;
+    left: -245px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #whole-wrap .personal-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 10px;
+  }
+}
+
+#whole-wrap .works-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=index-style.css.map */
