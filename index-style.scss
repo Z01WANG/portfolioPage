@@ -3,6 +3,16 @@
 // @import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);
 $sys-blue: #1563f1;
 
+@mixin pad{
+  @media(max-width:820px){
+    @content;
+  }
+}
+@mixin mobile{
+  @media(max-width:767px){
+    @content;
+  }
+}
 
 body {
   // border: 1px solid red;
@@ -30,9 +40,18 @@ body {
     // height: 100px;
     overflow: hidden;
     width: calc(100% - 255px);
-    // .content{
-    //   // white-space: pre-wrap;
-    // }
+    
+    @include mobile(){
+      width: 100%;
+      padding: 0;
+    }
+  }
+  @include mobile{
+    // background:blue;
+    flex-direction: column-reverse;
+  }
+  @include mobile{
+    // background:red;
   }
 }
 
@@ -42,8 +61,10 @@ h1 {
   font-weight: normal;
   font-weight: 600;
   font-size: 48px;
-  // font-size: 20px;
-  // border: 1px solid blue;
+  @include mobile(){
+    padding: 0 12px;
+    font-size: 32px;
+  }
 }
 
 h1:before, h1:after {
@@ -116,20 +137,19 @@ p {
       }
     }
   }
+  @include mobile(){
+    padding: 0 12px;
+  }
 }
 .contact-list{
-  // border: 1px solid ;
   display: flex;
   height: 70px;
   align-items: center;
-  // justify-content: space-between;
   padding: 0;
   li{
     display: flex;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.156);
     cursor: pointer;
-    // border: 1px solid red;
-    // padding: ;
     a{
       text-decoration: none;
       display: flex;
@@ -156,6 +176,10 @@ p {
       }
       // box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.156);
     }
+  }
+  @include mobile(){
+    margin: 0 12px;
+    overflow-x: auto;
   }
 }
 
@@ -186,13 +210,10 @@ p {
   overflow: hidden;
   width: 234px;
   height: 216px;
-  /* border: 10px solid; */
   overflow: hidden;
-  // border-radius: 128px;
   margin-top: 100px;
   margin-right: 20px;
   position: relative;
-  // box-shadow: 5px 0px 0px 10px $sys-blue;
   &::before{
     content: '';
     display: flex;
@@ -219,6 +240,9 @@ p {
     transform: translate(-235px, -45px);
     /* width: 300px; */
     height: 400px;
+  }
+  @include mobile{
+    margin: 12px auto 0 auto;
   }
 }
 .work-card-wrap{
@@ -282,6 +306,18 @@ p {
         width: fit-content;
         transition: linear .2s;
       }
+    }
+    @include pad(){
+      width: 245px;
+    }
+  }
+  @include mobile(){
+    flex-direction: column;
+    padding: 12px;
+    .card{
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 10px;
     }
   }
 }

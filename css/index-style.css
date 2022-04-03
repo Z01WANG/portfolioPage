@@ -30,6 +30,22 @@ body {
   width: calc(100% - 255px);
 }
 
+@media (max-width: 767px) {
+  .welcome-text .ani-wrap {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .welcome-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 h1 {
   position: relative;
   width: -webkit-max-content;
@@ -38,6 +54,13 @@ h1 {
   font-weight: normal;
   font-weight: 600;
   font-size: 48px;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    padding: 0 12px;
+    font-size: 32px;
+  }
 }
 
 h1:before, h1:after {
@@ -122,6 +145,12 @@ p .call-action:hover::after {
   margin-left: 5px;
 }
 
+@media (max-width: 767px) {
+  p {
+    padding: 0 12px;
+  }
+}
+
 .contact-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -179,6 +208,13 @@ p .call-action:hover::after {
   background: #1f6eff;
 }
 
+@media (max-width: 767px) {
+  .contact-list {
+    margin: 0 12px;
+    overflow-x: auto;
+  }
+}
+
 @-webkit-keyframes write {
   to {
     left: 100%;
@@ -228,7 +264,6 @@ p .call-action:hover::after {
   overflow: hidden;
   width: 234px;
   height: 216px;
-  /* border: 10px solid; */
   overflow: hidden;
   margin-top: 100px;
   margin-right: 20px;
@@ -268,6 +303,12 @@ p .call-action:hover::after {
           transform: translate(-235px, -45px);
   /* width: 300px; */
   height: 400px;
+}
+
+@media (max-width: 767px) {
+  .img-wrap {
+    margin: 12px auto 0 auto;
+  }
 }
 
 .work-card-wrap {
@@ -366,5 +407,27 @@ p .call-action:hover::after {
   width: fit-content;
   -webkit-transition: linear .2s;
   transition: linear .2s;
+}
+
+@media (max-width: 820px) {
+  .work-card-wrap .card {
+    width: 245px;
+  }
+}
+
+@media (max-width: 767px) {
+  .work-card-wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 12px;
+  }
+  .work-card-wrap .card {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+  }
 }
 /*# sourceMappingURL=index-style.css.map */
